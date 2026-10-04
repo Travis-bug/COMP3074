@@ -1,4 +1,4 @@
-package com.example.lab1helloandroid
+package ca.gbc.comp3074.Eweka_Travis.Lab1
 
 import android.os.Bundle
 import android.widget.Button

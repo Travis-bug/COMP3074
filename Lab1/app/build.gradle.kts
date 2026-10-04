@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.lab1helloandroid"
+    namespace = "ca.gbc.comp3074.Eweka_Travis.Lab1"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.lab1helloandroid"
+        applicationId = "ca.gbc.comp3074.Eweka_Travis.Lab1"
         minSdk = 24
         targetSdk = 37
         versionCode = 1

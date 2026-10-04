@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lab1HelloAndroid</string>
+    <string name="app_name">Lab1</string>
     <string name="hello_message">Hello Android!</string>
     <string name="click_me">Click Me</string>
     <string name="button_clicked">Button clicked!</string>
