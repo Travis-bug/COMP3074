@@ -1,4 +1,4 @@
-package ca.gbc.comp3074.Eweka_Travis.Lab5.ui.theme
+package ca.gbc.comp3074.Eweka_Travis.Lab6.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

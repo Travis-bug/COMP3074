@@ -1,4 +1,4 @@
-package ca.gbc.comp3074.Eweka_Travis.Lab5
+package ca.gbc.comp3074.Eweka_Travis.Lab6
 
 import android.content.Context
 import android.hardware.Sensor
@@ -27,7 +27,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import ca.gbc.comp3074.Eweka_Travis.Lab5.ui.theme.Lab5Theme
+import ca.gbc.comp3074.Eweka_Travis.Lab6.ui.theme.Lab6Theme
 
 class MainActivity : ComponentActivity(), SensorEventListener {
 
@@ -67,7 +67,7 @@ class MainActivity : ComponentActivity(), SensorEventListener {
         accelerometerAvailable = accelerometerSensor != null
 
         setContent {
-            Lab5Theme {
+            Lab6Theme {
                 SensorScreen(
                     temperature = temperature,
                     temperatureAvailable = temperatureAvailable,

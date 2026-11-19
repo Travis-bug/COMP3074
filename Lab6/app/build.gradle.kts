@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "ca.gbc.comp3074.Eweka_Travis.Lab5"
+    namespace = "ca.gbc.comp3074.Eweka_Travis.Lab6"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "ca.gbc.comp3074.Eweka_Travis.Lab5"
+        applicationId = "ca.gbc.comp3074.Eweka_Travis.Lab6"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
