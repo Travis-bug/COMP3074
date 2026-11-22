@@ -12,9 +12,11 @@ import React, { useCallback, useEffect, useState } from 'react';
 import {
   ActivityIndicator,
   FlatList,
+  Platform,
   Pressable,
   SafeAreaView,
   ScrollView,
+  StatusBar,
   StyleSheet,
   Text,
   TextInput,
@@ -279,7 +281,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.background,
     paddingHorizontal: 16,
-    paddingTop: 16,
+    // SafeAreaView only leaves room for the status bar on iOS. On Android it
+    // behaves like a plain View, so without this the first thing on screen
+    // (the Back to Users button) sits underneath the status bar and taps on
+    // it go to the system bar instead of the app.
+    paddingTop:
+      Platform.OS === 'android' ? (StatusBar.currentHeight || 0) + 16 : 16,
   },
   centered: {
     flex: 1,
