@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -150,12 +151,17 @@ fun ContactDetails(
         Text(
             text = user.phone,
             color = MaterialTheme.colorScheme.primary,
-            modifier = Modifier.clickable {
-                dialPhoneNumber(
-                    context = context,
-                    phoneNumber = user.phone
-                )
-            }
+            // fillMaxWidth first: a Text is only as wide as its characters, so
+            // without this the tap target ends at the last digit and taps to the
+            // right of the number silently do nothing.
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable {
+                    dialPhoneNumber(
+                        context = context,
+                        phoneNumber = user.phone
+                    )
+                }
         )
 
         DetailRow("Website", user.website)
